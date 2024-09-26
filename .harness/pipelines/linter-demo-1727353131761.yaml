@@ -1,0 +1,35 @@
+pipeline:
+  identifier: Build_clddevsecops_linter_demo_1727353142426
+  name: Build linter-demo
+  orgIdentifier: default
+  projectIdentifier: demoharness
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1727350968474
+        repoName: clddevsecops/linter-demo
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          caching:
+            enabled: true
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
