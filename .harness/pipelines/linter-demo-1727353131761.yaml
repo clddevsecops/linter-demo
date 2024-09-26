@@ -23,13 +23,15 @@ pipeline:
                   identifier: echo
                   name: echo
                   spec:
+                    shell: Sh
                     command: echo hello world
                   timeout: ""
                   type: Run
           platform:
-            arch: Amd64
             os: Linux
+            arch: Amd64
           runtime:
+            type: Docker
             spec: {}
-            type: Cloud
         type: CI
+        description: ""
