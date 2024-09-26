@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_clddevsecops_linter_demo_1727353142426-pr-trigger-input-set
+  identifier: Build_clddevsecops_linter_demo_1727353142426prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: demoharness
+  pipeline:
+    identifier: Build_clddevsecops_linter_demo_1727353142426
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
